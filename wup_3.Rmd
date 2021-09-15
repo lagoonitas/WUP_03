@@ -58,4 +58,8 @@ First we got the P value of 0.000116, so we conclude we reject the $h_0$;there i
 
 
  I reject the Null hypothesis. There is a difference in alcohal consumption depending on where you sit in the classroom.
+ 
+##Conclusions 
+ The people who sit in the back of the class room drink significantly more then those who sit in the middle or front of the class,we reject the Null hypothesis ; there is an association between where you sit and how much you drink.
+ 
 
