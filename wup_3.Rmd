@@ -33,11 +33,17 @@ basicCN + geom_boxplot()
   
   The front of the class seems to drink the least with the middle of the class drinking slightly more then the front but less then the back of the class.
   
+  
+  the front and middle show little difference in alcohal consumption
 ### get fancy  
 
 ```{r}
 basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='errorbar') + labs(title="Fancy notch boxplot \n with 2 lines")
 ```
+
+little to no difference bewteen those who sit in the front to middle and there is a huge diference bewteen the front to middle and the back.
+
+the back drinks alot.
 
 ## Numerical Summarys
 
@@ -59,10 +65,10 @@ The P value is too low.
 plot(TukeyHSD(model1))
 ```
 
-First we got the P value of 0.000116, so we conclude we reject the $h_0$;there is a difference bewteen where you sit in class and your aclcohcal consumption
+First we got the P value of 0.000116, so we conclude we reject the $h_0$;there is a difference bewteen where you sit in class and your alcohol consumption
 
 
- I reject the Null hypothesis. There is a difference in alcohal consumption depending on where you sit in the classroom.
+ I reject the Null hypothesis. There is a difference in alcohol consumption depending on where you sit in the classroom.
  
 ##Conclusions 
 
