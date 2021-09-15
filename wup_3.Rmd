@@ -50,6 +50,12 @@ favstats(alcohol~Seat,data=ucdavis1)
 model1 <- aov(alcohol~Seat,data=davisdata)
 summary.aov(model1)
 ```
-## Conclusions
+```{r}
+plot(TukeyHSD(model1))
+```
 
+First we got the P value of 0.000116, so we conclude we reject the $h_0$;there is a difference bewteen where you sit in class and your aclcohcal consumption
+
+
+ I reject the Null hypothesis. There is a difference in alcohal consumption depending on where you sit in the classroom.
 
