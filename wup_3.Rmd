@@ -16,7 +16,8 @@ davisdata <- read.csv(file="UCDavis.csv")
 ```
 ## Our Goal is to answer this question Is there a difference between the alcohol consumed between the row
 ## you choose to sit in??
-
+$h_0$ There is no difference an alcohal consumption  based on where one sits in class
+$h_A$ There is a difference of alcohal consumption based on where one sits in class
 ## Now with ggplot - first select the basic data
 
 ```{r}
@@ -28,6 +29,9 @@ basicCN <- ggplot(davisdata,aes(y=alcohol,x=Seat))
 basicCN + geom_boxplot()
 ```
   
+  the Box plot shows that people who sit in tha back tend to drink alcohal at a higher average level compared to those who sit in middle or the front.
+  
+  The front of the class seems to drink the least with the middle of the class drinking slightly more then the front but less then the back of the class.
   
 ### get fancy  
 
@@ -35,10 +39,17 @@ basicCN + geom_boxplot()
 basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='errorbar') + labs(title="Fancy notch boxplot \n with 2 lines")
 ```
 
-## Numerical Summarys 
+## Numerical Summarys
+
+```{r}
+favstats(alcohol~Seat,data=ucdavis1)
+```
 
 ## Inferential Tests
-
+```{r}
+model1 <- aov(alcohol~Seat,data=davisdata)
+summary.aov(model1)
+```
 ## Conclusions
 
 
