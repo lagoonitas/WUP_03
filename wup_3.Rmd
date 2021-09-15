@@ -45,11 +45,16 @@ basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='e
 favstats(alcohol~Seat,data=ucdavis1)
 ```
 
+The average student who sits in the back drinks significangtly more at 8.55 while those in front and middle drink significantly less at levels of 1.78(front) and 3.33(middle)
+
 ## Inferential Tests
 ```{r}
 model1 <- aov(alcohol~Seat,data=davisdata)
 summary.aov(model1)
 ```
+The P value is too low.
+
+
 ```{r}
 plot(TukeyHSD(model1))
 ```
@@ -60,6 +65,7 @@ First we got the P value of 0.000116, so we conclude we reject the $h_0$;there i
  I reject the Null hypothesis. There is a difference in alcohal consumption depending on where you sit in the classroom.
  
 ##Conclusions 
+
  The people who sit in the back of the class room drink significantly more then those who sit in the middle or front of the class,we reject the Null hypothesis ; there is an association between where you sit and how much you drink.
  
 
