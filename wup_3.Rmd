@@ -29,21 +29,20 @@ basicCN <- ggplot(davisdata,aes(y=alcohol,x=Seat))
 basicCN + geom_boxplot()
 ```
   
-  the Box plot shows that people who sit in tha back tend to drink alcohal at a higher average level compared to those who sit in middle or the front.
+  the Box plot shows that people who sit in the back tend to drink alcohol at a higher average level compared to those who sit in middle or the front.
   
   The front of the class seems to drink the least with the middle of the class drinking slightly more then the front but less then the back of the class.
   
   
-  the front and middle show little difference in alcohal consumption
+  the front and middle show little difference in alcohol consumption.
+  
 ### get fancy  
 
 ```{r}
 basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='errorbar') + labs(title="Fancy notch boxplot \n with 2 lines")
 ```
 
-little to no difference bewteen those who sit in the front to middle and there is a huge diference bewteen the front to middle and the back.
-
-the back drinks alot.
+ There is little to no difference between those who sit in the front to middle and there is a huge diference between the front to middle and the back;the back drinks alot. The front to middle drink less.
 
 ## Numerical Summarys
 
@@ -64,7 +63,8 @@ The P value is too low.
 ```{r}
 plot(TukeyHSD(model1))
 ```
-
+ The tukeu shows that there the middle to back drinks significantly more then the middle to back.
+ 
 First we got the P value of 0.000116, so we conclude we reject the $h_0$;there is a difference bewteen where you sit in class and your alcohol consumption
 
 
@@ -72,6 +72,6 @@ First we got the P value of 0.000116, so we conclude we reject the $h_0$;there i
  
 ##Conclusions 
 
- The people who sit in the back of the class room drink significantly more then those who sit in the middle or front of the class,we reject the Null hypothesis ; there is an association between where you sit and how much you drink.
+ The people who sit in the back of the class room drink significantly more then those who sit in the middle or front of the class,we reject the Null hypothesis ; there is an association between where you sit and how much you drink. Also the P value is to low so there is little to no chance to replicate the results.
  
 
